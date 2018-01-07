@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/stylesform.css') }}"/>
+{% block title %}sign up{% endblock %}
+{% endblock %}
+
+
+   
+
+    {% block content %}
+
+    
+    <div class="container">
+        <!-- bootstrap alert message -->
+        <div class="alert alert-success fade in">
+                
+                        <a href='signin.html' class="close" data-dismiss="alert">&times;</a>
+                
+                        <strong>Success!</strong> Your message has been sent successfully.
+                
+                    </div>
+                
+        <!-- bootstrap alert message ends here -->
+
+        <h3> Please sign in to do more</h3>
+    </div>
+    <hr>
+    <div class="container" id="log-in-form">
+        <div class="heading">
+            <h1>Log In Your Account</h1>
+        </div>
+        <form>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+            <div class="form-group form-group-btn">
+                <button type="submit" class="btn btn-success btn-lg">Log In</button>
+            </div>
+            <div class="clearfix"></div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Remember me</label>
+            </div>
+        </form>
+    </div>
+
+
+
+    <br>
+    <br>
+    {% endblock %}
